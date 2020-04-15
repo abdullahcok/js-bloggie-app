@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #1d1d1d;
+  --mainBlue: #3366ff;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+  --darkGrey: #2d2d2d;
+  --box-shadow: 0 2px 4px rgba(0,0,0, 1);
+}
+
+body {
+  background: var(--mainBlack);
+  color: var(--mainBlack);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+
+.title{
+  color: var(--mainGrey);
+  font-weight: bold;
+  width: 280px;
+  height: 40px;
+  border-radius: 3px;
+}
+
+.text {
+  border: 1px solid #111;
+  border-radius: 10px;
+  font-size: 12px;
+  width: 200px;
+  padding: 12px 20px;
+}
+
+.container{
+  background-color: var(--darkGrey);
+  padding: 10px;
+  margin: 50px 0;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  position: relative;
+  text-align: center;
+  width: 300px;
+  height: 500px;
+  box-shadow: var(--box-shadow);
+}
+
+.filter{
+  width: 250px;
+  padding: 10px;
+}
+
+.post{
+  position: relative;
+  background-color: var(--mainBlue);
+  color: var(--mainWhite);
+  box-shadow: var(--box-shadow);
+  margin: 17px 7px;
+  border-radius: 2px;
+  width: 260px;
+  height: 60px;
+  font-size: 8px;
+  visibility: visible;
+}
+
+.post .post-title{
+  margin: 0;
+}
+
+.post .post-body{
+  margin: 5px 0 0 0;
+  line-height: 1.3;
+}
+
+.post .post-info{
+  margin-left: 20px;
+}
+
+.post .number{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 7px 10px;
+  top: -15px;
+  left: -15px;
+  font-size: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--darkGrey);
+  background: #fff;
+  color: var(--darkGrey);
+}
+
+.loader{
+  /* opacity: 0; */
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  transition: opacity 0.3s ease-in;
+}
+
+.loader.show{
+  opacity: 1;
+}
+
+.circle{
+  background: var(--mainBlue);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: bounce 0.5s ease-in infinite;
+}
+
+@keyframes bounce{
+  0%
+  100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+}
