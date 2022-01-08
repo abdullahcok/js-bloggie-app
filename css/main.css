@@ -51,27 +51,6 @@ body {
   width: 300px;
   height: 500px;
   box-shadow: var(--box-shadow);
-
-  header{
-    width: 300px;
-    background: $blue;
-    @include bt-radius();
-    padding: 5px 30px;
-
-    .co{
-      float: left;
-      font-size: 20px;
-      margin: 10px 0;
-      font-weight: bold;
-    }
-
-    .logo{
-      width: 50px;
-      padding: 10px 40px;
-      float: right;
-      border-radius: 3px;
-    }
-  }
 }
 
 .filter{
